@@ -24,11 +24,11 @@ interface ProductProps {
 }
 
 export default function Product({ product }: ProductProps) {
-  /*   const { isFallback } = useRouter();
+  const { isFallback } = useRouter();
 
   if (isFallback) {
     return <p>Loading...</p>;
-  } */
+  }
   const [isRedirecting, setIsRedirecting] = useState(false);
 
   async function handleBuyProduct() {
