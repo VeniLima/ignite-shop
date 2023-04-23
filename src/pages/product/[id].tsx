@@ -43,6 +43,7 @@ export default function Product({ product }: ProductProps) {
       window.location.href = checkoutUrl;
     } catch (err) {
       setIsRedirecting(false);
+      console.log(checkoutURL)
       alert("Falha ao redirecionar ao checkout");
     }
   }
@@ -75,7 +76,7 @@ export default function Product({ product }: ProductProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [{ params: { id: "prod_N9qPuFqv8kQOoP" } }],
+    paths: [],
     fallback: true,
   };
 };
